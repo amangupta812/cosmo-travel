@@ -17,7 +17,7 @@ export default function PopularDestinations() {
     },
     {
       name: "Varanasi",
-      image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      image: "https://cdn.pixabay.com/photo/2015/10/21/12/26/lake-999536_640.jpg",
       description: "The spiritual capital of India"
     },
     {
