@@ -17,7 +17,7 @@ export default function PopularDestinations() {
     },
     {
       name: "Varanasi",
-      image: "https://cdn.pixabay.com/photo/2015/10/21/12/26/lake-999536_640.jpg",
+      image: "https://images.lonelyplanetitalia.it/uploads/gettyrf-827065008?q=80&p=slider&s=5595667a6e1e401506daa05413bd405b",
       description: "The spiritual capital of India"
     },
     {
@@ -27,7 +27,7 @@ export default function PopularDestinations() {
     },
     {
       name: "Ladakh",
-      image: "https://images.unsplash.com/photo-1589881133825-bbb3b9471b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      image: "https://media.istockphoto.com/id/1046313926/photo/indian-bikers-travel-on-national-highway-with-scenic-landscape-at-ladakh-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=kqMWn40ojqWCpazyRuz4MDSWbPPRY2EtfaGMyhsQSyc=",
       description: "Land of high passes"
     }
   ];
