@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import PopularDestinations from './components/PopularDestinations';
 import AdminPanel from './pages/AdminPanel';
 import PlacePage from './pages/PlacePage';
+import MapComponent from './components/MapComponent'; // Add this import for map integration
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
                 <Hero />
                 <Features />
                 <PopularDestinations />
+                <MapComponent /> {/* Add map to home page */}
               </>
             }
           />
-          
+
           {/* Admin Panel */}
           <Route path="/admin" element={<AdminPanel />} />
 
@@ -42,17 +44,17 @@ function App() {
               <div>
                 <h4 className="font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2">
-                  <li><a href="#about" className="text-gray-300 hover:text-white">About Us</a></li>
-                  <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
-                  <li><a href="#faq" className="text-gray-300 hover:text-white">FAQ</a></li>
+                  <li><Link to="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
+                  <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+                  <li><Link to="/faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Services</h4>
                 <ul className="space-y-2">
-                  <li><a href="#hotels" className="text-gray-300 hover:text-white">Hotels</a></li>
-                  <li><a href="#restaurants" className="text-gray-300 hover:text-white">Restaurants</a></li>
-                  <li><a href="#transport" className="text-gray-300 hover:text-white">Transport</a></li>
+                  <li><Link to="/hotels" className="text-gray-300 hover:text-white">Hotels</Link></li>
+                  <li><Link to="/restaurants" className="text-gray-300 hover:text-white">Restaurants</Link></li>
+                  <li><Link to="/transport" className="text-gray-300 hover:text-white">Transport</Link></li>
                 </ul>
               </div>
               <div>

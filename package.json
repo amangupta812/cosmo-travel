@@ -11,15 +11,17 @@
     "preview": "vite preview",
     "server": "node backend/server.js"
   },
- "dependencies": {
+  "dependencies": {
     "@headlessui/react": "^1.7.18",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "leaflet": "^1.9.4",
     "mapbox-gl": "^3.1.2",
     "mongoose": "^8.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
+    "react-leaflet": "^4.2.1",
     "react-map-gl": "^7.1.7",
     "react-router-dom": "^7.1.5"
   },
