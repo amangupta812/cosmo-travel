@@ -21,7 +21,29 @@ const placeData = {
     description: "Kerala Backwaters offer scenic houseboat cruises through lush green waterways.",
     topPlaces: ["Alleppey", "Kumarakom", "Vembanad Lake"],
     topFoods: ["Appam", "Puttu", "Fish Curry"]
+  },
+  "varanasi": {
+    name: "Varanasi",
+    image: "https://images.lonelyplanetitalia.it/uploads/gettyrf-827065008?q=80&p=slider&s=5595667a6e1e401506daa05413bd405b",
+    description: "Varanasi, the spiritual capital of India, is famous for its ancient ghats, temples, and rich cultural heritage.",
+    topPlaces: ["Kashi Vishwanath Temple", "Dashashwamedh Ghat", "Sarnath", "Manikarnika Ghat", "Ramnagar Fort"],
+    topFoods: ["Kachori Sabzi", "Banarasi Paan", "Malaiyo", "Lassi", "Baati Chokha"]
+  },
+  "goa-beaches": {
+    name: "Goa Beaches",
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    description: "Goa is a tropical paradise known for its beautiful beaches, nightlife, and delicious seafood.",
+    topPlaces: ["Baga Beach", "Anjuna Beach", "Dudhsagar Waterfalls", "Fort Aguada", "Basilica of Bom Jesus"],
+    topFoods: ["Goan Fish Curry", "Pork Vindaloo", "Bebinca", "Feni", "Prawn Balchão"]
+  },
+  "ladakh": {
+    name: "Ladakh",
+    image: "https://media.istockphoto.com/id/1046313926/photo/indian-bikers-travel-on-national-highway-with-scenic-landscape-at-ladakh-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=kqMWn40ojqWCpazyRuz4MDSWbPPRY2EtfaGMyhsQSyc=",
+    description: "Ladakh, the Land of High Passes, is famous for its rugged mountains, monasteries, and adventure sports.",
+    topPlaces: ["Pangong Lake", "Nubra Valley", "Magnetic Hill", "Leh Palace", "Thiksey Monastery"],
+    topFoods: ["Momos", "Thukpa", "Skyu", "Butter Tea (Gur Gur Chai)", "Chhang"]
   }
+  
   // Add more places here...
 };
 
