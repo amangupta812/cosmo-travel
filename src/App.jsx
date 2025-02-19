@@ -5,7 +5,8 @@ import Features from './components/Features';
 import PopularDestinations from './components/PopularDestinations';
 import AdminPanel from './pages/AdminPanel';
 import PlacePage from './pages/PlacePage';
-import MapComponent from './components/MapComponent'; // Add this import for map integration
+import MapComponent from './components/MapComponent';
+import About from './pages/About'; // Import the About page
 
 function App() {
   return (
@@ -22,10 +23,13 @@ function App() {
                 <Hero />
                 <Features />
                 <PopularDestinations />
-                <MapComponent /> {/* Add map to home page */}
+                <MapComponent />
               </>
             }
           />
+          
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
 
           {/* Admin Panel */}
           <Route path="/admin" element={<AdminPanel />} />
