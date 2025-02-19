@@ -7,6 +7,7 @@ import AdminPanel from './pages/AdminPanel';
 import PlacePage from './pages/PlacePage';
 import MapComponent from './components/MapComponent';
 import About from './pages/About'; // Import the About page
+import Contact from './pages/Contact'; // Import the Contact page
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           
           {/* About Page */}
           <Route path="/about" element={<About />} />
+
+          {/* Contact Page */}
+          <Route path="/contact" element={<Contact />} />
 
           {/* Admin Panel */}
           <Route path="/admin" element={<AdminPanel />} />
