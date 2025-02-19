@@ -8,6 +8,7 @@ import PlacePage from './pages/PlacePage';
 import MapComponent from './components/MapComponent';
 import About from './pages/About'; // Import the About page
 import Contact from './pages/Contact'; // Import the Contact page
+import DestinationPage from './pages/DestinationPage'; // Import DestinationPage
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
               </>
             }
           />
+
+          <Route path="/places/:placeName" element={<DestinationPage />} />
           
           {/* About Page */}
           <Route path="/about" element={<About />} />
