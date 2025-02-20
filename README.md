@@ -1,8 +1,27 @@
-# React + Vite
+Cosmo Travel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cosmo Travel is a web-based travel platform that helps users explore and learn about popular travel destinations. The platform provides information about famous locations, top-rated local foods, and must-visit attractions.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Explore Popular Destinations: Discover well-known places with beautiful images and descriptions.
+
+Destination Details: View in-depth details, including top-rated food and must-visit places for each destination.
+
+Interactive UI: A visually appealing and user-friendly interface using React and Tailwind CSS.
+
+Navigation: Smooth routing with React Router for a seamless browsing experience.
+
+Animations: Enhanced user experience with Framer Motion animations.
+
+Tech Stack
+
+Frontend: React, Tailwind CSS
+
+Routing: React Router
+
+Animations: Framer Motion
+
+Package Manager: Yarn / npm
+
+Build Tool: Vite
