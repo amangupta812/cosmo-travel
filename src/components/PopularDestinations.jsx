@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function PopularDestinations() {
   const destinations = [
@@ -47,21 +48,31 @@ export default function PopularDestinations() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
-            <Link key={index} to={`/places/${destination.slug}`}>
-              <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                <img
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                  <div className="absolute bottom-0 p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{destination.name}</h3>
-                    <p className="text-white/90">{destination.description}</p>
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Link to={`/places/${destination.slug}`}>
+                <div className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                  <motion.img
+                    src={destination.image}
+                    alt={destination.name}
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                    <div className="absolute bottom-0 p-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">{destination.name}</h3>
+                      <p className="text-white/90">{destination.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
