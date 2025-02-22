@@ -51,7 +51,7 @@ function App() {
               <div>
                 <h3 className="text-xl font-bold mb-4">CosmoTravel</h3>
                 <p className="text-gray-300">Explore the world with us</p>
-              </div>
+              </div>  
               <div>
                 <h4 className="font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2">
