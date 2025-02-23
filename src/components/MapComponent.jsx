@@ -16,22 +16,7 @@ const center = {
 const MapComponent = () => {
   return (
     <LoadScript googleMapsApiKey={apiKey}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-        {/* New Advanced Marker */}
-        <div
-          id="marker"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            width: "30px",
-            height: "30px",
-            backgroundColor: "red",
-            borderRadius: "50%",
-            transform: "translate(-50%, -50%)",
-          }}
-        />
-      </GoogleMap>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} />
     </LoadScript>
   );
 };
