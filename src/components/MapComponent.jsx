@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
@@ -9,16 +9,18 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 28.6139, // Delhi Latitude
-  lng: 77.2090, // Delhi Longitude
+  lat: 22.310696, // vadodara Latitude
+  lng: 73.192635, // vadodara Longitude
 };
 
 const MapComponent = () => {
-  return (
-    <LoadScript googleMapsApiKey={apiKey}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} />
-    </LoadScript>
-  );
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: apiKey,
+  });
+
+  if (!isLoaded) return <p>Loading Map...</p>;
+
+  return <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} />;
 };
 
 export default MapComponent;
