@@ -66,12 +66,124 @@ const placeData = {
       { name: "Magnetic Hill", location: "https://www.google.com/maps?q=Magnetic+Hill" }
     ],
     topFoods: ["Momos", "Thukpa", "Butter Tea"]
+  },
+  "vrindavan": {
+    name: "Vrindavan",
+    image: "https://wallpaperaccess.com/full/9386523.jpg",
+    description: "The land of Lord Krishna, filled with temples and spiritual bliss.",
+    topPlaces: [
+      { name: "Banke Bihari Temple", location: "https://www.google.com/maps?q=Banke+Bihari+Temple" },
+      { name: "Prem Mandir", location: "https://www.google.com/maps?q=Prem+Mandir" },
+      { name: "ISKCON Temple", location: "https://www.google.com/maps?q=ISKCON+Temple+Vrindavan" }
+    ],
+    topFoods: ["Lassi", "Kachori", "Pedas"]
+  },
+  "ayodhya": {
+    name: "Ayodhya",
+    image: "/images/ayodhya.jpg",
+    description: "The birthplace of Lord Rama, rich in history and religious significance.",
+    topPlaces: [
+      { name: "Ram Janmabhoomi", location: "https://www.google.com/maps?q=Ram+Janmabhoomi" },
+      { name: "Hanuman Garhi", location: "https://www.google.com/maps?q=Hanuman+Garhi" },
+      { name: "Kanak Bhawan", location: "https://www.google.com/maps?q=Kanak+Bhawan" }
+    ],
+    topFoods: ["Kachori", "Peda", "Malpua"]
+  },
+  "tirupati-balaji": {
+    name: "Tirupati Balaji",
+    image: "https://wallpaperaccess.com/full/2991971.jpg",
+    description: "One of the most visited pilgrimage sites, known for Sri Venkateswara Temple.",
+    topPlaces: [
+      { name: "Sri Venkateswara Temple", location: "https://www.google.com/maps?q=Sri+Venkateswara+Temple" },
+      { name: "Silathoranam", location: "https://www.google.com/maps?q=Silathoranam" },
+      { name: "TTD Gardens", location: "https://www.google.com/maps?q=TTD+Gardens" }
+    ],
+    topFoods: ["Laddu", "Pulihora", "Dosa"]
+  },
+  "rishikesh": {
+    name: "Rishikesh",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/74/Trayambakeshwar_Temple_VK.jpg",
+    description: "Rishikesh, the 'Yoga Capital of the World,' is known for its spiritual vibes, adventure sports, and stunning landscapes along the Ganges River.",
+    topPlaces: [
+      { name: "Lakshman Jhula", location: "https://www.google.com/maps?q=Lakshman+Jhula" },
+      { name: "Triveni Ghat", location: "https://www.google.com/maps?q=Triveni+Ghat" },
+      { name: "Neelkanth Mahadev Temple", location: "https://www.google.com/maps?q=Neelkanth+Mahadev+Temple" }
+    ],
+    topFoods: ["Aloo Puri", "Chotiwala Thali", "Momos"]
+  },
+  "haridwar": {
+    name: "Haridwar",
+    image: "https://media.istockphoto.com/id/596042540/photo/har-ki-pauri.jpg?s=612x612&w=0&k=20&c=igkOecfeSd5ktZ3mFkiw8Ya0tIN0mjdgOAWecBB7SuA=",
+    description: "Haridwar, a sacred city, is famous for the Ganga Aarti at Har Ki Pauri and is a major pilgrimage site in India.",
+    topPlaces: [
+      { name: "Har Ki Pauri", location: "https://www.google.com/maps?q=Har+Ki+Pauri" },
+      { name: "Mansa Devi Temple", location: "https://www.google.com/maps?q=Mansa+Devi+Temple" },
+      { name: "Chandi Devi Temple", location: "https://www.google.com/maps?q=Chandi+Devi+Temple" }
+    ],
+    topFoods: ["Kachori Sabzi", "Aloo Puri", "Rasabali"]
+  },
+  "kedarnath": {
+    name: "Kedarnath",
+    image: "https://wallpaperaccess.com/full/6883014.jpg",
+    description: "Kedarnath, one of the Char Dham pilgrimage sites, is home to the sacred Kedarnath Temple, surrounded by the majestic Himalayas.",
+    topPlaces: [
+      { name: "Kedarnath Temple", location: "https://www.google.com/maps?q=Kedarnath+Temple" },
+      { name: "Vasuki Tal", location: "https://www.google.com/maps?q=Vasuki+Tal" },
+      { name: "Gaurikund", location: "https://www.google.com/maps?q=Gaurikund" }
+    ],
+    topFoods: ["Rajma Chawal", "Chainsoo", "Madua Roti"]
+  },
+  "badrinath": {
+    name: "Badrinath",
+    image: "https://wallpaperaccess.com/full/13366327.jpg",
+    description: "Badrinath, a sacred town in Uttarakhand, is famous for the Badrinath Temple dedicated to Lord Vishnu.",
+    topPlaces: [
+      { name: "Badrinath Temple", location: "https://www.google.com/maps?q=Badrinath+Temple" },
+      { name: "Tapt Kund", location: "https://www.google.com/maps?q=Tapt+Kund" },
+      { name: "Charan Paduka", location: "https://www.google.com/maps?q=Charan+Paduka" }
+    ],
+    topFoods: ["Kachori", "Aloo Poori", "Maggie"]
+  },
+
+  "golden-temple": {
+    name: "Golden Temple",
+    image: "https://images.unsplash.com/photo-1623059508779-2542c6e83753?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z29sZGVuJTIwdGVtcGxlfGVufDB8fDB8fHww",
+    description: "The Golden Temple in Amritsar is a significant Sikh pilgrimage site known for its stunning architecture and langar service.",
+    topPlaces: [
+      { name: "Golden Temple", location: "https://www.google.com/maps?q=Golden+Temple" },
+      { name: "Jallianwala Bagh", location: "https://www.google.com/maps?q=Jallianwala+Bagh" },
+      { name: "Wagah Border", location: "https://www.google.com/maps?q=Wagah+Border" }
+    ],
+    topFoods: ["Langar Dal", "Amritsari Kulcha", "Lassi"]
+  },
+
+  "shirdi": {
+    name: "Shirdi",
+    image: "https://rukminim2.flixcart.com/image/850/1000/k2arbm80/poster/7/j/a/medium-shirdi-sai-baba-wall-poster-wall-paper-wall-sticker-original-imafhnsp3gzq7emb.jpeg?q=90&crop=false",
+    description: "Shirdi is a pilgrimage site dedicated to Sai Baba, attracting devotees from all over India.",
+    topPlaces: [
+      { name: "Sai Baba Temple", location: "https://www.google.com/maps?q=Sai+Baba+Temple+Shirdi" },
+      { name: "Dwarkamai", location: "https://www.google.com/maps?q=Dwarkamai+Shirdi" },
+      { name: "Shani Shingnapur", location: "https://www.google.com/maps?q=Shani+Shingnapur" }
+    ],
+    topFoods: ["Puran Poli", "Vada Pav", "Shira"]
   }
+};
+
+// Function to format the place name (remove spaces & lowercase)
+const formatPlaceName = (name) => {
+  return name?.toLowerCase().replace(/\s+/g, "-");
 };
 
 export default function PlacePage() {
   const { placeName } = useParams();
-  const place = placeData[placeName];
+  const formattedPlaceName = formatPlaceName(placeName);
+
+  console.log("URL Place Name:", placeName);
+  console.log("Formatted Place Name:", formattedPlaceName);
+  console.log("Available Places:", Object.keys(placeData));
+
+  const place = placeData[formattedPlaceName];
 
   if (!place) {
     return <h2 className="text-center text-2xl font-bold">Place Not Found</h2>;
@@ -91,7 +203,6 @@ export default function PlacePage() {
 
       <p className="text-lg text-gray-700 mt-6 text-center">{place.description}</p>
 
-      {/* Top Visiting Places */}
       <h3 className="text-3xl font-semibold mt-8 text-gray-900">📍 Top Visiting Places</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
         {place.topPlaces.map((spot, index) => (
@@ -110,7 +221,6 @@ export default function PlacePage() {
         ))}
       </div>
 
-      {/* Top Foods */}
       <h3 className="text-3xl font-semibold mt-8 text-gray-900">🍽️ Top-Rated Foods</h3>
       <div className="flex flex-wrap gap-3 mt-4">
         {place.topFoods.map((food, index) => (

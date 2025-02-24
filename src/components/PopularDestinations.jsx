@@ -38,6 +38,61 @@ export default function PopularDestinations() {
       slug: "ladakh",
       image: "https://media.istockphoto.com/id/1046313926/photo/indian-bikers-travel-on-national-highway-with-scenic-landscape-at-ladakh-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=kqMWn40ojqWCpazyRuz4MDSWbPPRY2EtfaGMyhsQSyc=",
       description: "Land of high passes"
+    },
+    {
+      name: "Vrindavan",
+      slug: "vrindavan",
+      image: "https://wallpaperaccess.com/full/9386523.jpg",
+      description: "The land of Lord Krishna, known for its temples and spiritual charm.",
+    },
+    {
+      name: "Ayodhya",
+      slug: "ayodhya",
+      image: "/images/ayodhya.jpg", // Use forward slashes and ensure the correct path
+      description: "The birthplace of Lord Rama, rich in history and religious significance.",
+    },
+    {
+      name: "Tirupati Balaji",
+      slug: "tirupati-balaji",
+      image: "https://wallpaperaccess.com/full/2991971.jpg",
+      description: "One of the richest temples in India, dedicated to Lord Venkateswara.",
+    },
+    
+    {
+      name: "Rishikesh",
+      slug: "rishikesh",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/74/Trayambakeshwar_Temple_VK.jpg",
+      description: "The yoga capital of the world, nestled in the Himalayas along the Ganges.",
+    },
+    {
+      name: "Haridwar",
+      slug: "haridwar",
+      image: "https://media.istockphoto.com/id/596042540/photo/har-ki-pauri.jpg?s=612x612&w=0&k=20&c=igkOecfeSd5ktZ3mFkiw8Ya0tIN0mjdgOAWecBB7SuA=",
+      description: "A sacred city known for the Kumbh Mela and the holy Ganges River.",
+    },
+    {
+      name: "Kedarnath",
+      slug: "kedarnath",
+      image: "https://wallpaperaccess.com/full/6883014.jpg",
+      description: "A revered pilgrimage site, home to one of the 12 Jyotirlingas of Shiva.",
+    },
+    {
+      name: "Badrinath",
+      slug: "badrinath",
+      image: "https://wallpaperaccess.com/full/13366327.jpg",
+      description: "A key Hindu pilgrimage destination dedicated to Lord Vishnu.",
+    },
+    {
+      name: "Shirdi",
+      slug: "shirdi",
+      image: "https://rukminim2.flixcart.com/image/850/1000/k2arbm80/poster/7/j/a/medium-shirdi-sai-baba-wall-poster-wall-paper-wall-sticker-original-imafhnsp3gzq7emb.jpeg?q=90&crop=false",
+      description: "The home of Sai Baba, attracting millions of devotees every year.",
+    },
+    {
+      name: "Golden Temple",
+      slug: "golden-temple",
+      image: "https://images.unsplash.com/photo-1623059508779-2542c6e83753?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z29sZGVuJTIwdGVtcGxlfGVufDB8fDB8fHww",
+      description: "A stunning Sikh pilgrimage site in Amritsar, Punjab.",
     }
   ];
 
