@@ -70,17 +70,17 @@ function App() {
                 </ul>
               </div>
               <div>
-                 <h4 className="font-semibold mb-4">Follow Us</h4>
-                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
-                    <FaTwitter />
-                  </a>
-                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
-                    <FaFacebook />
-                  </a>
-                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
-                    <FaInstagram />
-                  </a>
+               <h4 className="font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                <a href="#" className="text-blue-400 hover:text-blue-600 text-3xl transition-all    duration-300">
+                  <FaTwitter />
+                </a>
+                <a href="#" className="text-blue-700 hover:text-blue-900 text-3xl transition-all duration-300">
+                   <FaFacebook />
+                </a>
+                <a href="#" className="text-pink-500 hover:text-pink-700 text-3xl transition-all duration-300">
+                  <FaInstagram />
+                </a>
                </div>
               </div>
             </div>
