@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -69,12 +70,18 @@ function App() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-gray-300 hover:text-white">Twitter</a>
-                  <a href="#" className="text-gray-300 hover:text-white">Facebook</a>
-                  <a href="#" className="text-gray-300 hover:text-white">Instagram</a>
-                </div>
+                 <h4 className="font-semibold mb-4">Follow Us</h4>
+                 <div className="flex space-x-4">
+                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
+                    <FaTwitter />
+                  </a>
+                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
+                    <FaFacebook />
+                  </a>
+                  <a href="#" className="text-gray-300 hover:text-white text-2xl">
+                    <FaInstagram />
+                  </a>
+               </div>
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
