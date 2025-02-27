@@ -10,6 +10,9 @@ import MapComponent from './components/MapComponent';
 import About from './pages/About'; // Import the About page
 import Contact from './pages/Contact'; // Import the Contact page
 import DestinationPage from './pages/DestinationPage'; // Import DestinationPage
+import DestinationList from './pages/DestinationList'; // Import DestinationList
+
+
 
 function App() {
   return (
@@ -32,6 +35,12 @@ function App() {
           />
 
           <Route path="/places/:placeName" element={<DestinationPage />} />
+          <Route path="/destinations" element={<DestinationList />} />
+          <Route path="/destination/:id" element={<DestinationPage />} />
+          <Route path="/destinations" element={<DestinationList />} />
+          <Route path="/popular-destinations" element={<PopularDestinations />} />
+
+
           
           {/* About Page */}
           <Route path="/about" element={<About />} />
@@ -44,6 +53,7 @@ function App() {
 
           {/* Dynamic Place Page */}
           <Route path="/places/:placeName" element={<PlacePage />} />
+          
         </Routes>
 
         <footer className="bg-primary text-white py-8">

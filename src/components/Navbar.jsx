@@ -1,17 +1,41 @@
 import { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiSearch } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim()) {
+      navigate(`/destinations?search=${search}`);
+    }
+  };
 
   return (
-    <nav className="bg-white shadow-lg auto w-full z-50 ">
+    <nav className="bg-white shadow-lg w-full z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Logo />
           </div>
+
+          {/* Search Bar */}
+          <form onSubmit={handleSearch} className="hidden md:flex items-center border border-gray-300 rounded-md px-2">
+            <input
+              type="text"
+              placeholder="Search destinations..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="p-2 outline-none bg-transparent"
+            />
+            <button type="submit" className="p-2 text-gray-600 hover:text-primary">
+              <FiSearch size={20} />
+            </button>
+          </form>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -29,7 +53,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
@@ -40,6 +64,20 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {/* Search Bar in Mobile Menu */}
+              <form onSubmit={handleSearch} className="flex items-center border border-gray-300 rounded-md px-2">
+                <input
+                  type="text"
+                  placeholder="Search destinations..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="p-2 outline-none bg-transparent w-full"
+                />
+                <button type="submit" className="p-2 text-gray-600 hover:text-primary">
+                  <FiSearch size={20} />
+                </button>
+              </form>
+
               <a href="#hotels" className="block px-3 py-2 text-gray-700 hover:text-primary">Hotels</a>
               <a href="#food" className="block px-3 py-2 text-gray-700 hover:text-primary">Food</a>
               <a href="#tours" className="block px-3 py-2 text-gray-700 hover:text-primary">Tours</a>
