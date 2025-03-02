@@ -12,7 +12,13 @@ export default function Navbar() {
     e.preventDefault();
     if (search.trim()) {
       navigate(`/destinations?search=${search}`);
+      setSearch(''); // Clear input after search
     }
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    setIsOpen(false); // Close menu on mobile after clicking a link
   };
 
   return (
@@ -30,7 +36,7 @@ export default function Navbar() {
               placeholder="Search destinations..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="p-2 outline-none bg-transparent"
+              className="p-2 outline-none bg-transparent w-full"
             />
             <button type="submit" className="p-2 text-gray-600 hover:text-primary">
               <FiSearch size={20} />
@@ -39,10 +45,10 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#hotels" className="text-gray-700 hover:text-primary">Hotels</a>
-            <a href="#food" className="text-gray-700 hover:text-primary">Food</a>
-            <a href="#tours" className="text-gray-700 hover:text-primary">Tours</a>
-            <a href="#transport" className="text-gray-700 hover:text-primary">Transport</a>
+            <a onClick={() => handleNavigation('/hotels')} className="text-gray-700 hover:text-primary cursor-pointer">Hotels</a>
+            <a onClick={() => handleNavigation('/food')} className="text-gray-700 hover:text-primary cursor-pointer">Food</a>
+            <a onClick={() => handleNavigation('/tours')} className="text-gray-700 hover:text-primary cursor-pointer">Tours</a>
+            <a onClick={() => handleNavigation('/transport')} className="text-gray-700 hover:text-primary cursor-pointer">Transport</a>
             <select className="text-gray-700 hover:text-primary bg-transparent border-none focus:outline-none">
               <option value="en">English</option>
               <option value="hi">हिंदी</option>
@@ -65,7 +71,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {/* Search Bar in Mobile Menu */}
-              <form onSubmit={handleSearch} className="flex items-center border border-gray-300 rounded-md px-2">
+              <form onSubmit={handleSearch} className="flex items-center border border-gray-300 rounded-md px-2 w-full">
                 <input
                   type="text"
                   placeholder="Search destinations..."
@@ -78,10 +84,10 @@ export default function Navbar() {
                 </button>
               </form>
 
-              <a href="#hotels" className="block px-3 py-2 text-gray-700 hover:text-primary">Hotels</a>
-              <a href="#food" className="block px-3 py-2 text-gray-700 hover:text-primary">Food</a>
-              <a href="#tours" className="block px-3 py-2 text-gray-700 hover:text-primary">Tours</a>
-              <a href="#transport" className="block px-3 py-2 text-gray-700 hover:text-primary">Transport</a>
+              <a onClick={() => handleNavigation('/hotels')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Hotels</a>
+              <a onClick={() => handleNavigation('/food')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Food</a>
+              <a onClick={() => handleNavigation('/tours')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Tours</a>
+              <a onClick={() => handleNavigation('/transport')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Transport</a>
               <select className="block w-full px-3 py-2 text-gray-700 bg-transparent">
                 <option value="en">English</option>
                 <option value="hi">हिंदी</option>

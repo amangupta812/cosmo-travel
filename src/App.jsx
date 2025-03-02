@@ -11,6 +11,8 @@ import About from './pages/About'; // Import the About page
 import Contact from './pages/Contact'; // Import the Contact page
 import DestinationPage from './pages/DestinationPage'; // Import DestinationPage
 import DestinationList from './pages/DestinationList'; // Import DestinationList
+import Hotels from "./pages/Hotels";
+import Hotel from "./components/Hotel";
 
 
 
@@ -39,6 +41,7 @@ function App() {
           <Route path="/destination/:id" element={<DestinationPage />} />
           <Route path="/destinations" element={<DestinationList />} />
           <Route path="/popular-destinations" element={<PopularDestinations />} />
+          <Route path="/hotels" element={<Hotels />} />
 
 
           
