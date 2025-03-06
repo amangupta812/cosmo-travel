@@ -31,6 +31,7 @@ const BudgetTravel = () => {
         </div>
 
         {/* City Selection */}
+        
         <div>
           <label className="text-lg font-semibold mr-2">Choose a City:</label>
           <select

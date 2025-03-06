@@ -46,6 +46,7 @@ export default function Hero() {
                   aria-label="Select Destination"
                   required
                 >
+                  
                   <option value="">Select Destination</option>
                   <option value="Vadodara">Vadodara</option>
                   <option value="Delhi">Delhi</option>

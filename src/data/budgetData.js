@@ -27,6 +27,7 @@ export const budgetPlaces = {
     // Add 90 more restaurants...
   ],
 
+  
   attractions: [
     { name: "Laxmi Vilas Palace", price: 300, city: "Vadodara", location: "J N Marg" },
     { name: "Sayaji Garden", price: 100, city: "Vadodara", location: "Sayajigunj" },

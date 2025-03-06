@@ -3,6 +3,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { budgetPlaces } from "../../data/budgetData"; // Import budget data
 
+
 const BudgetResults = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);

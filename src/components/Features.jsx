@@ -7,7 +7,6 @@ export default function Features() {
       icon: <FiHome className="w-8 h-8" />,
       title: "Hotels & Stays",
       description: "From luxury palaces to boutique heritage hotels and homestays",
-      
       link: "/budget-travel" // Redirects to Budget Travel Guide
     },
     {

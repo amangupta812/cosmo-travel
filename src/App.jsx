@@ -15,6 +15,7 @@ import DestinationList from './pages/DestinationList'; // Import DestinationList
 import Hotels from "./pages/Hotels";
 import Hotel from "./components/Hotel";
 import BudgetTravel from "./components/BudgetTravel/BudgetTravel";
+
 import BudgetResults from "./components/BudgetTravel/BudgetResults";
 
 

@@ -17,6 +17,7 @@ export default function Navbar() {
       setSearch('');
     }
   };
+  
 
   const handleNavigation = (path) => {
     navigate(path);
