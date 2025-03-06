@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import Navbar from './components/Navbar';
@@ -13,6 +14,8 @@ import DestinationPage from './pages/DestinationPage'; // Import DestinationPage
 import DestinationList from './pages/DestinationList'; // Import DestinationList
 import Hotels from "./pages/Hotels";
 import Hotel from "./components/Hotel";
+import BudgetTravel from "./components/BudgetTravel/BudgetTravel";
+import BudgetResults from "./components/BudgetTravel/BudgetResults";
 
 
 
@@ -32,10 +35,16 @@ function App() {
                 <Features />
                 <PopularDestinations />
                 <MapComponent />
+                <BudgetTravel />
+                
               </>
             }
           />
+           <Route path="/budget-travel" element={<BudgetTravel />} />
+           <Route path="/budget-results" element={<BudgetResults />} />
+           
 
+          
           <Route path="/places/:placeName" element={<DestinationPage />} />
           <Route path="/destinations" element={<DestinationList />} />
           <Route path="/destination/:id" element={<DestinationPage />} />
