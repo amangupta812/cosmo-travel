@@ -1,11 +1,14 @@
 import { FiHome, FiMap, FiCoffee, FiTruck } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 export default function Features() {
   const features = [
     {
       icon: <FiHome className="w-8 h-8" />,
       title: "Hotels & Stays",
-      description: "From luxury palaces to boutique heritage hotels and homestays"
+      description: "From luxury palaces to boutique heritage hotels and homestays",
+      
+      link: "/budget-travel" // Redirects to Budget Travel Guide
     },
     {
       icon: <FiCoffee className="w-8 h-8" />,
@@ -31,11 +34,15 @@ export default function Features() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link 
+              key={index} 
+              to={feature.link || "#"} 
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block"
+            >
               <div className="text-primary mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

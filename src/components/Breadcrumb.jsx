@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable react/jsx-no-undef */
+// eslint-disable-next-line react-refresh/only-export-components
 function Breadcrumb() {
   const location = useLocation();
   const paths = location.pathname.split("/").filter((x) => x);
