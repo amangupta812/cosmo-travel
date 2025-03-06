@@ -41,11 +41,9 @@ function App() {
               </>
             }
           />
-           <Route path="/budget-travel" element={<BudgetTravel />} />
-           <Route path="/budget-results" element={<BudgetResults />} />
-           
+          <Route path="/budget-travel" element={<BudgetTravel />} />
+          <Route path="/budget-results" element={<BudgetResults />} />
 
-          
           <Route path="/places/:placeName" element={<DestinationPage />} />
           <Route path="/destinations" element={<DestinationList />} />
           <Route path="/destination/:id" element={<DestinationPage />} />
