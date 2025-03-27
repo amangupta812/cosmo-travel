@@ -2,6 +2,9 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import Navbar from './components/Navbar';
+import Tours from "./pages/tours"; // Import the Tours pageS
+import TourDetails from './pages/TourDetails';
+import MyBookings from './pages/MyBookings';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import PopularDestinations from './components/PopularDestinations';
@@ -37,10 +40,14 @@ function App() {
                 <PopularDestinations />
                 <MapComponent />
                 <BudgetTravel />
-                
+                {/* <Tours /> */}
               </>
             }
           />
+          
+          <Route path="/tours" element={<Tours />} />
+          <Route path="/tours/:id" element={<TourDetails />} />
+          <Route path="/my-bookings" element={<MyBookings />} /> {/* ✅ New Route */}
           <Route path="/budget-travel" element={<BudgetTravel />} />
           <Route path="/budget-results" element={<BudgetResults />} />
 

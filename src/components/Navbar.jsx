@@ -1,15 +1,14 @@
-import { useState, useRef, useEffect } from 'react';
-import { FiMenu, FiX, FiSearch, FiChevronDown } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiMenu, FiX, FiSearch } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isToursOpen, setIsToursOpen] = useState(false);
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
-  const dropdownRef = useRef(null);
 
+  // Handle search submission
   const handleSearch = (e) => {
     e.preventDefault();
     if (search.trim()) {
@@ -17,31 +16,18 @@ export default function Navbar() {
       setSearch('');
     }
   };
-  
 
+  // Handle navigation and close menu (for mobile)
   const handleNavigation = (path) => {
     navigate(path);
-    setIsOpen(false); // Close menu on mobile
-    setIsToursOpen(false); // Close dropdown on navigation
+    setIsOpen(false);
   };
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsToursOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <nav className="bg-white shadow-lg w-full z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div className="flex items-center">
             <Logo />
           </div>
@@ -64,45 +50,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <a onClick={() => handleNavigation('/hotels')} className="text-gray-700 hover:text-primary cursor-pointer">Hotels</a>
             <a onClick={() => handleNavigation('/food')} className="text-gray-700 hover:text-primary cursor-pointer">Food</a>
-
-            {/* Tours Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsToursOpen(!isToursOpen)}
-                className="text-gray-700 hover:text-primary cursor-pointer flex items-center"
-              >
-                Tours <FiChevronDown className="ml-1" />
-              </button>
-              {isToursOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg">
-                  <a
-                    onClick={() => handleNavigation('/tours/adventure')}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Adventure Tours
-                  </a>
-                  <a
-                    onClick={() => handleNavigation('/tours/cultural')}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Cultural Tours
-                  </a>
-                  <a
-                    onClick={() => handleNavigation('/tours/historical')}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Historical Places
-                  </a>
-                  <a
-                    onClick={() => handleNavigation('/tours/religious')}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Religious Places
-                  </a>
-                </div>
-              )}
-            </div>
-
+            <a onClick={() => handleNavigation('/tours')} className="text-gray-700 hover:text-primary cursor-pointer font-bold">Tours</a> 
             <a onClick={() => handleNavigation('/transport')} className="text-gray-700 hover:text-primary cursor-pointer">Transport</a>
             <select className="text-gray-700 hover:text-primary bg-transparent border-none focus:outline-none">
               <option value="en">English</option>
@@ -141,44 +89,8 @@ export default function Navbar() {
 
               <a onClick={() => handleNavigation('/hotels')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Hotels</a>
               <a onClick={() => handleNavigation('/food')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Food</a>
-
-              {/* Tours Dropdown in Mobile Menu */}
-              <div>
-                <button
-                  onClick={() => setIsToursOpen(!isToursOpen)}
-                  className="w-full text-left px-3 py-2 text-gray-700 hover:text-primary cursor-pointer flex items-center justify-between"
-                >
-                  Tours <FiChevronDown className="ml-1" />
-                </button>
-                {isToursOpen && (
-                  <div className="pl-4">
-                    <a
-                      onClick={() => handleNavigation('/tours/adventure')}
-                      className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer"
-                    >
-                      Adventure Tours
-                    </a>
-                    <a
-                      onClick={() => handleNavigation('/tours/cultural')}
-                      className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer"
-                    >
-                      Cultural Tours
-                    </a>
-                    <a
-                      onClick={() => handleNavigation('/tours/historical')}
-                      className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer"
-                    >
-                      Historical Places
-                    </a>
-                    <a
-                      onClick={() => handleNavigation('/tours/religious')}
-                      className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer"
-                    >
-                      Religious Places
-                    </a>
-                  </div>
-                )}
-              </div>
+              <a onClick={() => handleNavigation('/tours')} className="text-gray-700 hover:text-primary cursor-pointer font-bold">Tours</a>
+              <a onClick={() => handleNavigation('/my-bookings')} className="text-gray-700 hover:text-primary cursor-pointer">My Bookings</a>
 
               <a onClick={() => handleNavigation('/transport')} className="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">Transport</a>
               <select className="block w-full px-3 py-2 text-gray-700 bg-transparent">
